@@ -1,0 +1,11 @@
+{
+  "seed": 42,
+  "transactions": 5000,
+  "merchants": 5,
+  "accepted_unique_events": 13500,
+  "exact_duplicate_deliveries": 1350,
+  "conflicting_deliveries": 20,
+  "total_deliveries": 14870,
+  "reconciliation_as_of": "2026-02-15T00:00:00Z",
+  "default_grace_hours": 24
+}

@@ -1,0 +1,26 @@
+name: API tests
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ["3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install -r requirements.txt
+      - run: python -m unittest discover -s tests -v
+  container:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker compose up -d --build --wait
+      - run: curl --fail http://localhost:8000/health
+      - run: docker compose exec -T api python -m tools.seed --expect-conflicts 20
+      - if: always()
+        run: docker compose logs
+      - if: always()
+        run: docker compose down

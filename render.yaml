@@ -1,0 +1,24 @@
+# SQLite requires a persistent disk: use a PAID, single-instance service.
+# Native Python avoids container-volume ownership assumptions on the hosted disk.
+services:
+  - type: web
+    name: setu-reconciliation
+    runtime: python
+    plan: starter
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn --bind 0.0.0.0:$PORT --workers 1 --threads 4 --timeout 30 --access-logfile - --error-logfile - wsgi:app
+    healthCheckPath: /health
+    numInstances: 1
+    envVars:
+      - key: DATABASE_PATH
+        value: /var/data/payments.db
+      - key: API_KEY
+        generateValue: true
+      - key: REQUIRE_API_KEY
+        value: "true"
+      - key: SETTLEMENT_GRACE_HOURS
+        value: "24"
+    disk:
+      name: payment-data
+      mountPath: /var/data
+      sizeGB: 1

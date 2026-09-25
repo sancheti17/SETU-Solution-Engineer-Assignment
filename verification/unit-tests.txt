@@ -1,0 +1,36 @@
+test_auth_and_security_headers (tests.test_api.APITest.test_auth_and_security_headers) ... ok
+test_bad_query_parameters (tests.test_api.APITest.test_bad_query_parameters) ... ok
+test_busy_database_returns_retryable_503 (tests.test_api.APITest.test_busy_database_returns_retryable_503) ... ok
+test_changed_payload_conflict_is_persisted_once (tests.test_api.APITest.test_changed_payload_conflict_is_persisted_once) ... ok
+test_concurrent_distinct_events_same_transaction (tests.test_api.APITest.test_concurrent_distinct_events_same_transaction) ... ok
+test_concurrent_duplicate_ingestion (tests.test_api.APITest.test_concurrent_duplicate_ingestion) ... ok
+test_conflicting_outcomes_do_not_depend_on_arrival (tests.test_api.APITest.test_conflicting_outcomes_do_not_depend_on_arrival) ... ok
+test_distinct_settlement_ids_are_suspected_duplicates (tests.test_api.APITest.test_distinct_settlement_ids_are_suspected_duplicates) ... ok
+test_equal_sort_values_have_stable_tie_breaker (tests.test_api.APITest.test_equal_sort_values_have_stable_tie_breaker) ... ok
+test_exact_retries_do_not_add_history (tests.test_api.APITest.test_exact_retries_do_not_add_history) ... ok
+test_filters_date_range_pagination_and_sort (tests.test_api.APITest.test_filters_date_range_pagination_and_sort) ... ok
+test_full_lifecycle_and_history (tests.test_api.APITest.test_full_lifecycle_and_history) ... ok
+test_grace_window_and_exact_boundary (tests.test_api.APITest.test_grace_window_and_exact_boundary) ... ok
+test_healthy_and_empty_queries (tests.test_api.APITest.test_healthy_and_empty_queries) ... ok
+test_history_and_conflict_pagination (tests.test_api.APITest.test_history_and_conflict_pagination) ... ok
+test_input_validation (tests.test_api.APITest.test_input_validation) ... ok
+test_invalid_json_content_type_and_oversize (tests.test_api.APITest.test_invalid_json_content_type_and_oversize) ... ok
+test_json_404_and_405 (tests.test_api.APITest.test_json_404_and_405) ... ok
+test_late_settlement_clears_pending (tests.test_api.APITest.test_late_settlement_clears_pending) ... ok
+test_money_does_not_round_binary_floats (tests.test_api.APITest.test_money_does_not_round_binary_floats) ... ok
+test_out_of_order_all_permutations (tests.test_api.APITest.test_out_of_order_all_permutations) ... ok
+test_persistence_across_app_restart (tests.test_api.APITest.test_persistence_across_app_restart) ... ok
+test_repeated_processed_events_are_not_conflicts (tests.test_api.APITest.test_repeated_processed_events_are_not_conflicts) ... ok
+test_reused_id_cannot_create_different_transaction (tests.test_api.APITest.test_reused_id_cannot_create_different_transaction) ... ok
+test_semantically_equivalent_payload_is_duplicate (tests.test_api.APITest.test_semantically_equivalent_payload_is_duplicate) ... ok
+test_settled_failed_payment (tests.test_api.APITest.test_settled_failed_payment) ... ok
+test_settlement_only_then_processed (tests.test_api.APITest.test_settlement_only_then_processed) ... ok
+test_summary_separates_currencies_and_ignores_event_fanout (tests.test_api.APITest.test_summary_separates_currencies_and_ignores_event_fanout) ... ok
+test_transaction_identity_is_immutable (tests.test_api.APITest.test_transaction_identity_is_immutable) ... ok
+test_transaction_rollback_is_atomic (tests.test_api.APITest.test_transaction_rollback_is_atomic) ... ok
+test_full_volume_dataset_and_projection_integrity (tests.test_api.DatasetTest.test_full_volume_dataset_and_projection_integrity) ... ok
+
+----------------------------------------------------------------------
+Ran 31 tests in 5.638s
+
+OK

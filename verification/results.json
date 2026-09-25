@@ -1,0 +1,91 @@
+{
+  "verified_at": "2026-09-24T16:41:49.235260+00:00",
+  "environment": {
+    "python": "3.13.15",
+    "sqlite": "3.53.4",
+    "node": "v26.10.0",
+    "server": "Gunicorn 26.2.0: one worker, four threads",
+    "transport": "HTTP over Unix domain socket (sandbox loopback bind unavailable)"
+  },
+  "unit_tests": {
+    "run": 31,
+    "failures": 0,
+    "errors": 0,
+    "seconds": 5.639
+  },
+  "http_full_volume": {
+    "delivery_records": 14870,
+    "status_counts": {
+      "201": 13500,
+      "200": 1350,
+      "409": 20
+    },
+    "seconds": 51.272,
+    "authenticated": true
+  },
+  "database_before_postman": {
+    "merchants": 5,
+    "transactions": 5000,
+    "payment_events": 13500,
+    "ingestion_conflicts": 20
+  },
+  "database_integrity": "ok",
+  "foreign_key_violations": 0,
+  "baseline_discrepancies": 2505,
+  "restart_persistence_verified": true,
+  "postman_collection": {
+    "requests": 14,
+    "script_tests_passed": 14,
+    "runner": "bundled Node smoke runner; not Postman GUI/Newman"
+  },
+  "local_http_query_timings": {
+    "merchant_status_page": {
+      "samples": 20,
+      "median_ms": 4.465,
+      "p95_ms": 4.851
+    },
+    "transaction_detail": {
+      "samples": 20,
+      "median_ms": 2.597,
+      "p95_ms": 3.198
+    },
+    "merchant_summary": {
+      "samples": 20,
+      "median_ms": 21.122,
+      "p95_ms": 27.234
+    },
+    "all_discrepancy_page": {
+      "samples": 20,
+      "median_ms": 8.0,
+      "p95_ms": 9.72
+    },
+    "overdue_only": {
+      "samples": 20,
+      "median_ms": 9.616,
+      "p95_ms": 10.719
+    }
+  },
+  "query_plan_merchant_status": [
+    {
+      "id": 5,
+      "parent": 0,
+      "notused": 61,
+      "detail": "SEARCH transactions USING INDEX idx_transactions_merchant_status_created (merchant_id=? AND status=?)"
+    }
+  ],
+  "query_plan_overdue": [
+    {
+      "id": 4,
+      "parent": 0,
+      "notused": 194,
+      "detail": "SEARCH t USING INDEX idx_unsettled_processed (processed_at<?)"
+    }
+  ],
+  "limitations": [
+    "TCP loopback bind failed (errno99); HTTP integration used a Unix socket",
+    "Docker image, Compose, CI and Render not executed",
+    "No public repository, hosted endpoint, or screen recording created",
+    "Initial fixture-count assertion corrected before passing test runs",
+    "Local timings are not production capacity guarantees"
+  ]
+}

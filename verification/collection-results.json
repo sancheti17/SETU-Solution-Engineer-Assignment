@@ -1,0 +1,62 @@
+{
+  "requests": 14,
+  "passed_tests": 14,
+  "results": [
+    {
+      "name": "01 Health",
+      "status": 200
+    },
+    {
+      "name": "02 Initiate a new payment",
+      "status": 201
+    },
+    {
+      "name": "03 Exact retry is idempotent",
+      "status": 200
+    },
+    {
+      "name": "04 Process payment",
+      "status": 201
+    },
+    {
+      "name": "05 List with merchant, status, dates, sorting and pagination",
+      "status": 200
+    },
+    {
+      "name": "06 Show overdue unsettled payment",
+      "status": 200
+    },
+    {
+      "name": "07 Settle payment",
+      "status": 201
+    },
+    {
+      "name": "08 Fetch details and preserved history",
+      "status": 200
+    },
+    {
+      "name": "09 Reconciliation summary by merchant, date, status",
+      "status": 200
+    },
+    {
+      "name": "10 Reused event ID with changed amount is rejected",
+      "status": 409
+    },
+    {
+      "name": "11 Record contradictory failure evidence",
+      "status": 201
+    },
+    {
+      "name": "12 Show settlement/payment inconsistency",
+      "status": 200
+    },
+    {
+      "name": "13 Validate fractional minor units",
+      "status": 422
+    },
+    {
+      "name": "14 Inspect audit and unchanged amount",
+      "status": 200
+    }
+  ]
+}
