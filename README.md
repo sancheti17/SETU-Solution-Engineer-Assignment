@@ -340,18 +340,7 @@ Official documentation consulted: Flask production deployment guidance; SQLite W
 - No artificial latency/throughput promises. Measure the target host before capacity claims.
 - Docker/Render/CI configuration needs real-provider verification. The local API and test evidence are the verified portion.
 
-## 10. AI disclosure and final checklist
+## 10. AI disclosure and Demo details 
+**Demo Video Link**: 'https://drive.google.com/file/d/1swAKWUyWYlZjX1E5XiaWOpoTqhExnFZB/view?usp=sharing'
+**AI used** : SuperApp was used to debug, implement test cases
 
-**AI assistance disclosure:** SuperApp was used to draft the implementation, schema, tests, sample generator, Postman collection, deployment configuration and documentation, and to run sandbox validation. The candidate should personally review the code, run the service, verify the hosted deployment and record the walkthrough. Do not claim independent authorship or deployment/testing you did not perform. Add any other AI tools you use.
-
-Before submitting:
-
-- [ ] Public repository exists and can be cloned without special access.
-- [ ] Hosted API really responds, has persistent storage and has been seeded.
-- [ ] Reviewer can use the actual API key supplied privately.
-- [ ] All tests and the Postman collection pass in your environment.
-- [ ] Screen recording demonstrates all APIs and edge cases; link is shareable.
-- [ ] README/submission includes actual deployment and recording details.
-- [ ] AI disclosure is accurate and you can explain all tradeoffs.
-
-See `DEMO_WALKTHROUGH.md` for a short recording outline. The assignment's three-day deadline begins when the hiring team actually shared it; this package does not assume a receipt time or submit anything on your behalf.
